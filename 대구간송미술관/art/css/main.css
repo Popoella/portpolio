@@ -3,3 +3,27 @@
 @import url(common.css);
 @import url(layout.css);
 
+.visual {
+    position: relative;
+}
+.visual h2 {
+    display: none;
+}
+.visual .swiper ul li {
+    position: relative;
+}
+.visual .swiper ul li .photo {
+    overflow: hidden;
+    height: 52.9412em;
+    text-align: center;
+}
+.visual .swiper ul li .photo img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;  
+}
+.visual .swiper ul li .visual_txt {
+    position: absolute;
+    left: 0;
+    
+}
