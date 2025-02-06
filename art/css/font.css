@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'JeonjuCraft_Mj';
+    src: url('../fonts/JeonjuCraftMjB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JeonjuCraft_Mj';
+    src: url('../fonts/JeonjuCraftMjL.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
