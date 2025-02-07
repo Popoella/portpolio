@@ -37,4 +37,15 @@ $(document).ready(function(){
             $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').removeClass('over')
         }
     })
+
+    $('header .tnb .lang button').on('click', function(){
+        if(device_status == 'pc'){
+            if($('header .tnb .lang').hasClass('open')){
+                $('header .tnb .lang').removeClass('open')
+            }else{
+                $('header .tnb .lang').addClass('open')
+            }
+        }
+    })
+    
 })
