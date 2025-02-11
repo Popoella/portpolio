@@ -148,7 +148,6 @@
 .visual .ctrl_wrap {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     bottom: 3.8em;
 }
 .visual .ctrl_wrap button {
@@ -164,6 +163,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    z-index: 10;
 }
 .visual .ctrl_wrap button.prev::before {
     width: 0.7em;
@@ -221,3 +221,31 @@
     height: 4.7647em;
     border-right: 1px solid #1d1d1d;
 }
+.iden {
+    margin-top: 4.7647em;
+    position: relative;
+}
+.iden .photo {
+    overflow: hidden;
+    width: 100%;
+    height: 51.5294em;
+}
+.iden .photo img {
+    width: 100%;
+    height: auto;
+}
+.iden h2{
+    position: absolute;
+    top: 4.1125em;
+    font-size: 4.7059rem;
+}
+.iden h2 strong {
+    color: #751F20;
+}
+.iden p {
+    position: absolute;
+    top: 444px;
+    font-size: 35px;
+    line-height: 140%;
+}
+
