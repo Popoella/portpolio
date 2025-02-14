@@ -3,3 +3,17 @@
 @import url(common.css); /* wrapper, 기본 글자 스타일 */
 @import url(layout.css); /* header/footer  */
 
+.visual {
+    width: 1720px;
+    height: 900px;
+    margin: 0 5%;
+    background: url(../images/visual_01.jpg) no-repeat center center/cover; 
+}
+.visual .visual_txt {
+    color: #fff;
+    
+}
+
+body {
+    margin-bottom: 1000px
+}
