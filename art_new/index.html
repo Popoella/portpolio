@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- swiper 라이브러리 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/main.css"> <!-- 홈페이지 스타일을 주는 파일 -->
+    <script src="js/jquery-3.7.1.min.js"></script> <!-- jqeury를 동작 시키는 파일, 내가 선언하는 common.js/ main.js 반드시 먼저 선언되어야함 -->
+    <script src="js/common.js"></script> <!--header/footer에 들어가는 공통사항 -->
+    <script src="js/main.js"></script> <!-- 메인페이지에만 존재하는 스크립트 -->
+    
     <title>대구간송미술관</title>
 </head>
 <body>
+    <a href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"></a>
     <header>
         <div class="inner">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="대구간송미술관 로고"></a></div>
@@ -73,32 +83,43 @@
     <section class="visual">
         <div class="swiper">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                    <div class="visual_txt"><p>Life is full of<br>ups and downs</p></div>
-                    <div class="loading"></div>
+                <li class="swiper-slide bg1">
+                    <div class="visual_txt">
+                        <p>Life is full of<br>ups and downs</p>
+                        <div class="loading"></div>
+                    </div>
                 </li>
-                <li class="swiper-slide">
-                    <div class="visual_txt"><p>(덕수궁)수묵별미:<br>한· 중 근현대 회화</p></div>
-                    <div class="loading"></div>
+                <li class="swiper-slide bg2">
+                    <div class="visual_txt">
+                        <p>(덕수궁)수묵별미:<br>한· 중 근현대 회화</p>
+                        <div class="loading"></div>
+                    </div>
                 </li>
-                <li class="swiper-slide">
-                    <div class="visual_txt"><p>FROM<br>NOTHING<br>TO EVERYTHING</p></div>
-                    <div class="loading"></div>
+                <li class="swiper-slide bg3">
+                    <div class="visual_txt">
+                        <p>FROM<br>NOTHING<br>TO EVERYTHING</p>
+                        <div class="loading"></div>
+                    </div>
                 </li>
-                <li class="swiper-slide">
-                    <div class="visual_txt"><p>판화특별전<br><에코토피아-Ecotopia></p></div>
-                    <div class="loading"></div>
+                <li class="swiper-slide bg4">
+                    <div class="visual_txt">
+                        <p>판화특별전<br><에코토피아-Ecotopia></p>
+                        <div class="loading"></div>
+                    </div>
                 </li>
             </ul>
         </div>
+        
         <div class="btn_wrap">
             <button class="prev">이전팝업보기</button>
+            <button class="stop">일시정지</button>
+            <button class="play">다시시작</button>
             <button class="next">다음팝업보기</button>
         </div>
         <div class="link">
             <ul>
-                <li><a href="#n">오시는 길</a></li>     
-                <li><a href="#n">FAQ</a></li>
+                <li class="road"><a href="#n">오시는 길</a></li>     
+                <li class="faq"><a href="#n">FAQ</a></li>
             </ul>
         </div>
     </section>
