@@ -13,6 +13,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
 }
 .visual .swiper ul li.bg1 {
     background-image: url(../images/main/visual_01.jpg);
@@ -31,8 +33,37 @@
     color: #fff;
     font-size: 80px;
     line-height: 1.2;
-    margin: 385px 0 0 13%;
+    margin: 0 31% 272px 13%;
 }
+.visual .swiper ul li .loading {
+    width: 189px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 51px;
+    position: relative;
+}
+.visual .swiper ul li .loading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #751f20;
+}
+.visual .swiper ul li.swiper-slide-active .loading::before {
+    animation-name: loading_ani;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading_ani {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
 .visual .btn_wrap {
     position: absolute;
     left: 0;
@@ -73,42 +104,200 @@
 .visual .btn_wrap button.play::before {
     background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.668 25.3334V6.66675L25.3346 16.0001L10.668 25.3334Z' fill='white'/%3E%3C/svg%3E%0A");
 }
+.visual .btn_wrap button.play {
+    display: none;
+}
 
 .visual .link {
+    display: flex;
+    align-items: flex-end;
     position: absolute;
-    left: 66.67%;
+    right: 0;
     bottom: 0;
-    width: 84%;
+    width: 31%;
     height: 100%;
+    border-left: 1px solid #fff;
+    z-index: 1;
 }
-.visual .link::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 1px;
-    border-right: 1px solid #fff;
+
+.visual .link ul {
+    width: 100%;
 }
 .visual .link ul li {
+    border-top: 1px solid #fff;
+    position: relative;
+}
+
+
+.visual .link ul li::before {
+    content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
+    right: 26px;
+    bottom: 35px;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.6969 31.25H12.5V28.75H42.6969L28.2162 14.2694L30 12.5L47.5 30L30 47.5L28.2162 45.7306L42.6969 31.25Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
 }
 .visual .link ul li a {
     font-size: 45px;
     color: #fff;
     display: block;
+    padding: 41px 0 113px 48px;
 }
-.visual .link ul li.road {
-    margin: 0 0 325px 0;
+
+@media screen and (max-width:1400px) {
+    .visual .swiper ul li .visual_txt {
+        font-size: 65px;
+    }
+    .visual .link ul li a {
+        font-size: 35px;
+    }
 }
-.visual .link ul li.faq {
-    margin: 0 0 113px 0;
+@media screen and (max-width:1200px) {
+    .visual .swiper ul li {
+        height: 450px;
+    }
+    .visual .swiper ul li .visual_txt {
+        font-size: 45px;
+        margin-bottom: 150px;
+        margin: 0 31% 100px 10%;
+    }
+    .visual .swiper ul li .loading {
+        width: 120px;
+        height: 2px;
+        margin-top: 25px;
+    }
+    .visual .btn_wrap button {
+        width: 25px;
+        height: 25px;
+    }
+    .visual .link ul li::before {
+        right: 13px;
+        bottom: 17px;
+        width: 35px;
+        height: 35px;
+    }
+    .visual .link ul li a {
+        font-size: 25px;
+        padding: 25px 0 55px 30px;
+    }
+}
+@media screen and (max-width:768px) {
+    .visual {
+        margin: 0 20px;
+    }
+    .visual .swiper ul li .visual_txt {
+        font-size: 35px;
+        margin: 0 7% 130px 7%;
+    }
+    .visual .swiper .loading {
+        display: none;
+    }
+    .visual .link {
+        background-color: #eae1d0;
+        position: relative;
+        right: auto;
+        bottom: auto; 
+        width: auto;
+        height: auto;
+        border-left: none;
+    }
+    .visual .link ul {
+        display: flex;
+    }
+    .visual .link ul li {
+        border-top: none;
+        width: 50%;
+        text-align: center;
+        position: relative;
+    }
+    .visual .link ul li::after {
+        content: "";
+        position: absolute;
+        height: 18px;
+        width: 1px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #1d1d1d;
+    }
+    .visual .link ul li:nth-child(1)::after {
+        display: none;
+    }
+    .visual .link ul li::before {
+        display: none;
+    }
+    .visual .link ul li a {
+        color: #1d1d1d;
+        font-size: 17px;
+        padding: 14px 0;
+    }
+    .visual .btn_wrap {
+       display: none;
+    }
+}
+.info {
+    margin: 0 5%;
+}
+.info ul {
+    display: flex;
+}
+.info ul li {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-right: 1px solid #1d1d1d;
+}
+.info ul li:last-child {
+    border-right: none;
+}
+.info ul li strong {
+    font-weight: 700;
+    position: relative;
+}
+.info ul li strong::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -10px;
+    width: 5px;
+    height: 5px;
+    background-color: #1d1d1d;
+    border-radius: 50%;
+}
+@media screen and (max-width:1200px) {
+    .info ul li {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .info ul li strong::before {
+        top: 8px;
+        width: 3px;
+        height: 3px;
+    }
+}
+@media screen and (max-width:768px) {
+    .info {
+        margin-top: 40px;
+    }
+    .info ul {
+        display: block;
+    }
+    .info ul li {
+        width: auto;
+        display: block;
+        border-right: none;
+        margin-bottom: 18px;
+    }
 }
 
 
 body {
     margin-bottom: 1000px
 }
+

@@ -7,15 +7,15 @@ header {
 }
 header .inner {
     display: flex;
-    gap: 108px;
     align-items: center;
+    gap: 108px;
 }
 header .logo a {
     display: block;
     font-size: 0;
     line-height: 0;
 }
-@media screen and (min-width:1301px) {
+@media screen and (min-width:1201px) {
     header .gnb .gnb_open, 
     header .gnb .gnb_close {
         display: none;
@@ -29,6 +29,10 @@ header .logo a {
         line-height: 100px;
         padding: 0 20px;
     }
+    header .gnb .gnb_wrap ul.depth1 > li > a:hover {
+        font-weight: 700;
+        color: #751f20;
+    }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: none;
     }
@@ -40,15 +44,22 @@ header .logo a {
         line-height: 0;
     }
 }
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1400px) {
+    header .inner {
+        gap: 50px;
+    }
+    header .logo a img {
+        width: 90%;
+        height: auto;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width:1200px) {
     header {
         position: relative;
-        height: 55px;
-        padding: 0 0 0 20px;
-    }
-    header .logo a img{
-        width: 80%;
-        height: auto;
     }
     header .gnb .gnb_wrap,
     header .gnb .gnb_close,
@@ -64,8 +75,8 @@ header .logo a {
         top: 0;
     }
     header .gnb .gnb_open {
-        width: 55px;
-        height: 55px;
+        width: 100px;
+        height: 100px;
         position: relative;
     }
     header .gnb .gnb_open::before,
@@ -78,7 +89,7 @@ header .logo a {
         height: 100%;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: 30px 30px;
+        background-size: 40px 40px;
     }
     header .gnb .gnb_open::before {
         background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.375 21.3125V20.4375H24.625V21.3125H5.375ZM5.375 15.4375V14.5625H15H24.625V15.4375H5.375ZM5.375 9.5625V8.6875H24.625V9.5625H5.375Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
@@ -87,11 +98,33 @@ header .logo a {
         background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.00187 22.8846L7.11719 21.9999L14.1172 14.9999L7.11719 7.99992L8.00187 7.11523L15.0019 14.1152L22.0019 7.11523L22.8866 7.99992L15.8866 14.9999L22.8866 21.9999L22.0019 22.8846L15.0019 15.8846L8.00187 22.8846Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
     }
     header .tnb {
-        margin-right: 55px;
+        margin-right: 100px;
         font-size: 0;
         line-height: 0;
     }
+}
+@media screen and (max-width:768px) {
+    header {
+        height: 55px;
+        padding: 0 0 0 20px;
+    }
+    header .gnb .gnb_open {
+        width: 55px;
+        height: 55px;
+    }
+    header .logo a img{
+        width: 80%;
+        height: auto;
+    }
+    header .gnb .gnb_open::before,
+    header .gnb .gnb_close::before {
+        background-size: 30px 30px;
+    }
+    header .tnb {
+        margin-right: 55px;
+    }
     header .tnb .search button img {
         width: 80%;
+        height: auto;
     }
 }
