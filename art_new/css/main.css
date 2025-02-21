@@ -350,7 +350,7 @@
     .identity .iden_txt h2 {
         font-size: 45px;
     }
-    .ientity .iden_txt p {
+    .identity .iden_txt p {
         font-size: 20px;
     }
 }
@@ -374,6 +374,7 @@
 
 .exhibition .tit {
     position: relative;
+    padding-top: 143px;
 }
 .exhibition .tit::before {
     content: "";
@@ -381,41 +382,53 @@
     width: 100%;
     height: 1px;
     left: 0;
-    bottom: -48px;
+    bottom: -34px;
     background-color: #1d1d1d;
 }
 .exhibition .tit .wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     position: relative;
 }
 .exhibition .tit h2 {
     font-size: 45px;
-    margin: 143px 0 0 65px;
+    margin-left: 65px;
 }
 .exhibition .tit .tab_list ul {
     display: flex;
-    margin: 157px 0 0 240px;
-    gap: 24px;
-    align-items: center;
+    gap: 48px;
 }
 .exhibition .tit .tab_list ul li {
     font-size: 25px;
+    position: relative;
+}
+.exhibition .tit .tab_list ul li::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 50%);
+    height: 55px;
+    left: -25%;
+    top: -10px;
+    background-color: #751f20;
+    z-index: -1;
+    opacity: 0;
 }
 .exhibition .tit .tab_list ul li.active {
     color: #fff;
-    font-weight: 700;
-    padding: 10px 24px;
-    background-color: #751f20;
+}
+.exhibition .tit .tab_list ul li.active::before {
+    opacity: 1;
 }
 .exhibition .tit .more {
-    text-indent: -9999px;
+    line-height: 0;
+    font-size: 0;
 }
 .exhibition .tit .more a {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: 0;
     display: block;
-    margin-bottom: 10px;
     width: 40px;
     height: 40px;
 }
@@ -445,7 +458,7 @@
     background-color: #1d1d1d;
 }
 .exhibition .list {
-    margin: 98px 0 0 0;
+    margin-top: 98px;
     top: 0;
     position: relative;
     left: calc(50% - 562px);
@@ -485,18 +498,148 @@
 }
 .exhibition .list .swiper ul li a .tag {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin: 12px 0 13px 0;
 }
 .exhibition .list .swiper ul li a .tag span {
     border: 1px solid #1d1d1d;
     padding: 7px 10px;
-    margin-right: 10px;
 } 
 
-@media screen and (max-width:1300px) {
+
+@media screen and (max-width:1400px) {
 
 }
-
+@media screen and (max-width:1300px) {
+    .exhibition::before {
+        left: 20px;
+    }
+    .exhibition .list {
+        position: relative;
+        left: 86px;
+        width: calc(100% - 86px);
+    }
+}
+@media screen and (max-width:1200px) {
+    .exhibition {
+        padding-bottom: 40px;
+    }
+    .exhibition .tit {
+        padding-top: 80px;
+    }
+    .exhibition .tit::before {
+        bottom: -20px;
+    }
+    .exhibition .tit h2 {
+        font-size: 25px;
+        margin-left: 40px;
+    }
+    .exhibition .tit .tab_list ul {
+        gap: 22px;
+    }
+    .exhibition .tit .tab_list ul li {
+        font-size: 17px;
+    }
+    .exhibition .tit .tab_list ul li.active::before {
+        width: calc(100% + 30%);
+        height: 36px;
+        left: -15%;
+        top: -6px;
+    }
+    .exhibition .tit .more a {
+        bottom: 2px;
+        width: 25px;
+        height: 25px;
+    }
+    .exhibition .tit .more a::before {
+        background-size: 14px 14px;
+    }
+    .exhibition .list {
+        margin-top: 50px;
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+    .exhibition .list .swiper ul li {
+        width: 200px;
+    }
+    .exhibition .list .swiper ul li a h3 {
+        margin: 12px 0 7px 0;
+        font-size: 17px;
+    }
+    .exhibition .list .swiper ul li a .tag {
+        margin: 8px 0 6px 0;
+    }
+    .exhibition .list .swiper ul li a .tag span {
+        border: 1px solid #1d1d1d;
+        padding: 4px 7px;
+    } 
+}
+@media screen and (max-width:768px) {
+    .exhibition .tit {
+        padding-top: 66px;
+    }
+    .exhibition .tit .wrapper {
+        display: block;
+    }
+    .exhibition .tit::before {
+        display: none;
+    }
+    .exhibition .tit h2 {
+        margin-left: auto;
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+    .exhibition .tit .tab_list ul {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .exhibition .tit .tab_list ul li {
+        font-size: 14px;
+    }
+    .exhibition .tit .tab_list ul li.active::before {
+        width: calc(100% + 30%);
+        height: 30px;
+        left: -15%;
+        top: -6px;
+    }
+    .exhibition .tit .more a {
+        bottom: 45px;
+        width: 20px;
+        height: 20px;
+    }
+    .exhibition .tit .more a::before {
+        background-size: 12px 12px;
+    }
+    .exhibition {
+        padding-bottom: 60px;
+    }
+    .exhibition::before {
+        display: none;
+    }
+    .exhibition .list {
+        margin: 33px 0 0 0;
+        left: 20px;
+        width: calc(100% - 20px);
+    }
+    .exhibition .list .swiper ul li {
+        width: 200px;
+    }
+    .exhibition .list .swiper ul li a h3 {
+        margin: 7px 0 5px 0;
+        font-size: 14px;
+    }
+    .exhibition .list .swiper ul li a p {
+        display: none;
+    }
+    .exhibition .list .swiper ul li a .tag {
+        display: none;
+    }
+}
+/*1200이하에서 tab_list가 화면 밖까지 넓이가 잡힘
+1200이상에서 more a::before이 브라우저가 줄어들면 따라오지 않아서 가로 스크롤바가 생김
+이미지만 아래정렬하는 방법*/
 
 
 
