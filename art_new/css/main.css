@@ -127,8 +127,6 @@
     border-top: 1px solid #fff;
     position: relative;
 }
-
-
 .visual .link ul li::before {
     content: "";
     position: absolute;
@@ -150,11 +148,20 @@
 }
 
 @media screen and (max-width:1400px) {
+    .visual .swiper ul li {
+        height: 750px;
+    }
     .visual .swiper ul li .visual_txt {
         font-size: 65px;
+        margin-bottom: 220px;
     }
     .visual .link ul li a {
         font-size: 35px;
+        padding: 35px 0 95px 40px;
+    }
+    .visual .link ul li::before {
+        width: 50px;
+        height: 50px;
     }
 }
 @media screen and (max-width:1200px) {
@@ -374,21 +381,13 @@
 
 .exhibition .tit {
     position: relative;
-    padding-top: 143px;
-}
-.exhibition .tit::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: 0;
-    bottom: -34px;
-    background-color: #1d1d1d;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #1d1d1d;
 }
 .exhibition .tit .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
 }
 .exhibition .tit h2 {
@@ -397,37 +396,24 @@
 }
 .exhibition .tit .tab_list ul {
     display: flex;
-    gap: 48px;
 }
 .exhibition .tit .tab_list ul li {
     font-size: 25px;
     position: relative;
 }
-.exhibition .tit .tab_list ul li::before {
-    content: "";
-    position: absolute;
-    width: calc(100% + 50%);
-    height: 55px;
-    left: -25%;
-    top: -10px;
+.exhibition .tit .tab_list ul li button {
+    padding: 10px 24px;
+}
+.exhibition .tit .tab_list ul li.active button {
     background-color: #751f20;
-    z-index: -1;
-    opacity: 0;
-}
-.exhibition .tit .tab_list ul li.active {
     color: #fff;
-}
-.exhibition .tit .tab_list ul li.active::before {
-    opacity: 1;
 }
 .exhibition .tit .more {
     line-height: 0;
     font-size: 0;
 }
 .exhibition .tit .more a {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
+    position: relative;
     display: block;
     width: 40px;
     height: 40px;
@@ -445,7 +431,7 @@
     background-repeat: no-repeat;
 }
 .exhibition {
-    padding-bottom: 109px;
+    padding: 143px 0 109px 0;
     position: relative;
 }
 .exhibition::before {
@@ -458,9 +444,9 @@
     background-color: #1d1d1d;
 }
 .exhibition .list {
-    margin-top: 98px;
-    top: 0;
+    margin-top: 50px;
     position: relative;
+    top: 0;
     left: calc(50% - 562px);
     width: calc(50% + 562px);
 }
@@ -473,23 +459,17 @@
 .exhibition .list .swiper ul li a .photo {
     position: relative;
     overflow: hidden;
+    height: 500px;
 }
 .exhibition .list .swiper ul li a .photo img {
     width: 100%;
-}
-.exhibition .list .swiper ul li a .photo::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.7);
-    opacity: 0;
-    transition: 0.2s;
+    object-fit: contain;
+    object-position: center bottom;
 }
-.exhibition .list .swiper ul li.hover a .photo::before {
-    opacity: 1;
+.exhibition .list .swiper ul li.hover a .photo {
+    opacity: 0.5;
+    transition: 0.1s;
 }
 .exhibition .list .swiper ul li a h3 {
     margin: 24px 0 8px 0;
@@ -509,7 +489,54 @@
 
 
 @media screen and (max-width:1400px) {
-
+    .exhibition {
+        padding: 110px 0 80px 0;
+    }
+    .exhibition .tit {
+        padding-bottom: 25px;
+    }
+    .exhibition .tit h2 {
+        font-size: 35px;
+    }
+    .exhibition .tit .tab_list ul li {
+        font-size: 22px;
+    }
+    .exhibition .tit .tab_list ul li button {
+        padding: 8px 19px;
+    }
+    .exhibition .tit .more a {
+        width: 30px;
+        height: 30px;
+    }
+    .exhibition .tit .more a::before {
+        background-size: 16px 16px;
+    }
+    .exhibition .list {
+        margin-top: 42px;
+    }
+    .exhibition .list .swiper ul li {
+        width: 240px;
+    }
+    .exhibition .list .swiper ul li a .photo {
+        height: 407px;
+    }
+    .exhibition .list .swiper ul li a h3 {
+        margin: 18px 0 8px 0;
+        font-size: 22px;
+    }
+    .exhibition .list .swiper ul li a p {
+        font-size: 15px;
+    }
+    .exhibition .list .swiper ul li a .tag {
+        margin: 10px 0 10px 0;
+        font-size: 15px;
+    }
+    .exhibition .list .swiper ul li a .tag span {
+        padding: 5px 9px;
+    }
+    .exhibition .list .swiper ul li a .date {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width:1300px) {
     .exhibition::before {
@@ -523,32 +550,22 @@
 }
 @media screen and (max-width:1200px) {
     .exhibition {
-        padding-bottom: 40px;
+        padding: 70px 0 40px 0;
     }
     .exhibition .tit {
-        padding-top: 80px;
-    }
-    .exhibition .tit::before {
-        bottom: -20px;
+        padding-bottom: 20px;
     }
     .exhibition .tit h2 {
         font-size: 25px;
         margin-left: 40px;
     }
-    .exhibition .tit .tab_list ul {
-        gap: 22px;
-    }
     .exhibition .tit .tab_list ul li {
         font-size: 17px;
     }
-    .exhibition .tit .tab_list ul li.active::before {
-        width: calc(100% + 30%);
-        height: 36px;
-        left: -15%;
-        top: -6px;
+    .exhibition .tit .tab_list ul li button {
+        padding: 7px 16px;
     }
     .exhibition .tit .more a {
-        bottom: 2px;
         width: 25px;
         height: 25px;
     }
@@ -556,19 +573,22 @@
         background-size: 14px 14px;
     }
     .exhibition .list {
-        margin-top: 50px;
+        margin-top: 35px;
         left: 60px;
         width: calc(100% - 60px);
     }
     .exhibition .list .swiper ul li {
         width: 200px;
     }
+    .exhibition .list .swiper ul li a .photo {
+        height: 339px;
+    }
     .exhibition .list .swiper ul li a h3 {
-        margin: 12px 0 7px 0;
+        margin: 15px 0 7px 0;
         font-size: 17px;
     }
     .exhibition .list .swiper ul li a .tag {
-        margin: 8px 0 6px 0;
+        margin: 10px 0 8px 0;
     }
     .exhibition .list .swiper ul li a .tag span {
         border: 1px solid #1d1d1d;
@@ -577,35 +597,33 @@
 }
 @media screen and (max-width:768px) {
     .exhibition .tit {
-        padding-top: 66px;
+        border-bottom: none;
+        padding-bottom: 0;
     }
     .exhibition .tit .wrapper {
         display: block;
     }
-    .exhibition .tit::before {
-        display: none;
-    }
     .exhibition .tit h2 {
-        margin-left: auto;
+        margin-left: 0;
         font-size: 22px;
-        margin-bottom: 18px;
+        margin-bottom: 12px;
     }
     .exhibition .tit .tab_list ul {
         justify-content: center;
-        gap: 15px;
         flex-wrap: wrap;
     }
     .exhibition .tit .tab_list ul li {
         font-size: 14px;
     }
-    .exhibition .tit .tab_list ul li.active::before {
-        width: calc(100% + 30%);
-        height: 30px;
-        left: -15%;
-        top: -6px;
+    .exhibition .tit .tab_list ul li button {
+        padding: 3px 8px;
+    }
+    .exhibition .tit .more {
+        position: absolute;
+        right: 0;
+        top: 4px;
     }
     .exhibition .tit .more a {
-        bottom: 45px;
         width: 20px;
         height: 20px;
     }
@@ -613,21 +631,24 @@
         background-size: 12px 12px;
     }
     .exhibition {
-        padding-bottom: 60px;
+        padding: 66px 0 60px 0;
     }
     .exhibition::before {
         display: none;
     }
     .exhibition .list {
-        margin: 33px 0 0 0;
+        margin-top: 20px;
         left: 20px;
         width: calc(100% - 20px);
     }
     .exhibition .list .swiper ul li {
-        width: 200px;
+        width: 120px;
+    }
+    .exhibition .list .swiper ul li a .photo {
+        height: 203px;
     }
     .exhibition .list .swiper ul li a h3 {
-        margin: 7px 0 5px 0;
+        margin: 12px 0 5px 0;
         font-size: 14px;
     }
     .exhibition .list .swiper ul li a p {
@@ -637,9 +658,140 @@
         display: none;
     }
 }
-/*1200이하에서 tab_list가 화면 밖까지 넓이가 잡힘
-1200이상에서 more a::before이 브라우저가 줄어들면 따라오지 않아서 가로 스크롤바가 생김
-이미지만 아래정렬하는 방법*/
+
+.event {
+    border-top: 1px solid #1d1d1d;
+} 
+.event .wrapper {
+    display: flex;
+}
+.event .culture {
+    border-left: 1px solid #1d1d1d;
+    padding-left: 68px;
+    width: 45.4%;
+    border-right: 1px solid #1d1d1d;
+    padding-bottom: 50px;
+}
+.event .culture .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 77px 0 25px 0;
+    width: 436px;
+}
+.event .culture .tit h2 {
+    font-size: 45px;
+}
+.event .culture .tit .btn_wrap {
+    line-height: 0;
+    font-size: 0;
+}
+.event .culture .tit .btn_wrap button {
+    position: relative;
+    width: 55px;
+    height: 55px;
+}
+.event .culture .tit .btn_wrap button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center center;
+}
+.event .culture .tit .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5367 20.8335H31.668V19.1668H11.5367L21.1905 9.51308L20.0013 8.3335L8.33463 20.0002L20.0013 31.6668L21.1905 30.4872L11.5367 20.8335Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+}
+.event .culture .tit .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5367 20.8335H31.668V19.1668H11.5367L21.1905 9.51308L20.0013 8.3335L8.33463 20.0002L20.0013 31.6668L21.1905 30.4872L11.5367 20.8335Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    transform: rotate(180deg);
+}
+.event .culture .swiper ul li {
+    width: 436px;
+}
+.event .culture .swiper ul li .photo {
+    overflow: hidden;
+}
+.event .culture .swiper ul li h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 20px 0 8px 0;
+}
+.event .culture .swiper ul li p {
+    font-size: 25px;
+    color: #751f20;
+}
+.event .culture.hover {
+    background-color: #272727;
+    transition: 0.4s;
+} 
+.event .culture.hover .tit .btn_wrap button.prev::before,
+.event .culture.hover .tit .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5367 20.8335H31.668V19.1668H11.5367L21.1905 9.51308L20.0013 8.3335L8.33463 20.0002L20.0013 31.6668L21.1905 30.4872L11.5367 20.8335Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+.event .culture.hover .tit,
+.event .culture.hover .swiper ul li h3,
+.event .culture.hover .swiper ul li p {
+    color: #fff;
+    transition: 0.4s;
+}
+.event .announce {
+    width: 54.6%;
+    margin-left: 79px;
+}
+.event .announce .notice  {
+    margin-top: 78px;
+}
+.event .announce .notice .tit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.event .announce .notice .tit h2 {
+    font-size: 45px;
+}
+.event .announce .notice .tit .more {
+    line-height: 0;
+    font-size: 0;
+}
+.event .announce .notice .tit .more a {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.event .announce .notice .tit .more a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7757 15.6169H5.70312V13.762H13.7757V5.68945H15.6306V13.762H23.7031V15.6169H15.6306V23.6895H13.7757V15.6169Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center center;
+}
+.event .announce .notice .list ul li {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+.event .announce .notice .list ul li p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 445px;
+}
+.event .announce .notice .list ul li span {
+    color: #751f20;
+}
+
 
 
 
