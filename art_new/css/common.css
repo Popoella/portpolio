@@ -13,7 +13,8 @@ body, html {
 }
 #wrap {
     width: 100%;
-    position: relative; 
+    position: relative;
+    overflow: hidden; 
 }
 @media screen and (max-width:1300px){
                         .wrapper {

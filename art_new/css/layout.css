@@ -4,6 +4,7 @@ header {
     align-items: center;
     height: 100px;
     padding: 0 32px 0 21px;
+    position: relative;
 }
 header .inner {
     display: flex;
@@ -16,6 +17,16 @@ header .logo a {
     line-height: 0;
 }
 @media screen and (min-width:1201px) {
+    header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 423px;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: -1;
+    }
     header .gnb .gnb_open, 
     header .gnb .gnb_close {
         display: none;

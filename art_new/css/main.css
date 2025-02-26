@@ -490,7 +490,7 @@
 
 @media screen and (max-width:1400px) {
     .exhibition {
-        padding: 110px 0 80px 0;
+        padding: 110px 0 110px 0;
     }
     .exhibition .tit {
         padding-bottom: 25px;
@@ -519,6 +519,10 @@
     }
     .exhibition .list .swiper ul li a .photo {
         height: 407px;
+    }
+    .exhibition .list .swiper ul li.hover a .photo {
+        opacity: 1;
+        transition: 0;
     }
     .exhibition .list .swiper ul li a h3 {
         margin: 18px 0 8px 0;
@@ -550,7 +554,7 @@
 }
 @media screen and (max-width:1200px) {
     .exhibition {
-        padding: 70px 0 40px 0;
+        padding: 70px 0 70px 0;
     }
     .exhibition .tit {
         padding-bottom: 20px;
@@ -661,23 +665,24 @@
 
 .event {
     border-top: 1px solid #1d1d1d;
+    border-bottom: 1px solid #1d1d1d;
 } 
 .event .wrapper {
     display: flex;
 }
 .event .culture {
     border-left: 1px solid #1d1d1d;
-    padding-left: 68px;
+    padding-left: 5.3969%;
     width: 45.4%;
     border-right: 1px solid #1d1d1d;
-    padding-bottom: 50px;
+    padding-bottom: auto;
 }
 .event .culture .tit {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 77px 0 25px 0;
-    width: 436px;
+    margin: 143px 0 25px 0;
+    width: 88.11%;
 }
 .event .culture .tit h2 {
     font-size: 45px;
@@ -709,61 +714,69 @@
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5367 20.8335H31.668V19.1668H11.5367L21.1905 9.51308L20.0013 8.3335L8.33463 20.0002L20.0013 31.6668L21.1905 30.4872L11.5367 20.8335Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
     transform: rotate(180deg);
 }
-.event .culture .swiper ul li {
-    width: 436px;
-}
 .event .culture .swiper ul li .photo {
+    width: 504px;
     overflow: hidden;
 }
+.event .culture .swiper ul li .photo img {
+    height: auto;
+    max-width: 100%;
+}
 .event .culture .swiper ul li h3 {
+    width: 504px;
     font-size: 25px;
     font-weight: 700;
-    margin: 20px 0 8px 0;
+    margin: 18px 0 8px 0;
 }
 .event .culture .swiper ul li p {
+    width: 504px;
     font-size: 25px;
     color: #751f20;
 }
-.event .culture.hover {
-    background-color: #272727;
-    transition: 0.4s;
-} 
-.event .culture.hover .tit .btn_wrap button.prev::before,
-.event .culture.hover .tit .btn_wrap button.next::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5367 20.8335H31.668V19.1668H11.5367L21.1905 9.51308L20.0013 8.3335L8.33463 20.0002L20.0013 31.6668L21.1905 30.4872L11.5367 20.8335Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
-}
-.event .culture.hover .tit,
-.event .culture.hover .swiper ul li h3,
-.event .culture.hover .swiper ul li p {
-    color: #fff;
-    transition: 0.4s;
-}
 .event .announce {
     width: 54.6%;
-    margin-left: 79px;
 }
-.event .announce .notice  {
-    margin-top: 78px;
+.event .announce .notice {
+    padding: 143px 0 48px 79px;
+    position: relative;
 }
-.event .announce .notice .tit {
+.event .announce .news {
+    padding: 78px 0 123px 79px;
+}
+.event .announce .notice::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 1px;
+    background-color: #1d1d1d;
+}
+.event .announce .notice .tit,
+.event .announce .news .tit {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
 }
-.event .announce .notice .tit h2 {
+.event .announce .notice .tit h2,
+.event .announce .news .tit h2 {
     font-size: 45px;
 }
-.event .announce .notice .tit .more {
+.event .announce .notice .tit .more,
+.event .announce .news .tit .more {
     line-height: 0;
     font-size: 0;
 }
-.event .announce .notice .tit .more a {
+.event .announce .notice .tit .more a,
+.event .announce .news .tit .more a {
+    display: block;
     position: relative;
     width: 30px;
     height: 30px;
 }
-.event .announce .notice .tit .more a::before {
+.event .announce .notice .tit .more a::before,
+.event .announce .news .tit .more a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -775,25 +788,298 @@
     background-size: 24px 24px;
     background-position: center center;
 }
-.event .announce .notice .list ul li {
-    font-size: 25px;
+.event .announce .notice .list ul li a,
+.event .announce .news .list ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 34px;
+    font-size: 25px;
 }
-.event .announce .notice .list ul li p {
+.event .announce .notice .list ul li a:hover,
+.event .announce .news .list ul li a:hover {
+    border-bottom: 1px solid #1d1d1d;
+}
+.event .announce .notice .list ul li a p,
+.event .announce .news .list ul li a p {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     width: 445px;
 }
-.event .announce .notice .list ul li span {
+.event .announce .notice .list ul li a span,
+.event .announce .news .list ul li a span {
     color: #751f20;
+}
+
+@media screen and (max-width:1400px) {
+    .event .culture {
+        padding-left: 8.3333%;
+    }
+    .event .culture .tit {
+        width: 78%;
+        margin-top: 78px;
+    }
+    .event .culture .tit h2 {
+        font-size: 35px;
+    }
+    .event .culture .tit .btn_wrap button {
+        width: 45px;
+        height: 45px;
+    }
+    .event .culture .tit .btn_wrap button::before {
+        background-size: 35px 35px;
+    }
+    .event .culture .swiper ul li .photo {
+        width: 78%;
+    }
+    .event .culture .swiper ul li h3 {
+        width: 78%;
+        font-size: 22px;
+        margin: 13px 0 5px 0;
+    }
+    .event .culture .swiper ul li p {
+        width: 78%;
+        font-size: 22px;
+    }
+    .event .announce .notice {
+        padding: 78px 0 30px 79px;
+    }
+    .event .announce .news {
+        padding: 78px 0 60px 79px;
+    }
+    .event .announce .notice .tit,
+    .event .announce .news .tit {
+        margin-bottom: 20px;
+    }
+    .event .announce .notice .tit h2,
+    .event .announce .news .tit h2 {
+        font-size: 35px;
+    }
+    .event .announce .notice .tit .more a,
+    .event .announce .news .tit .more a {
+        width: 25px;
+        height: 25px;
+    }
+    .event .announce .notice .tit .more a::before,
+    .event .announce .news .tit .more a::before {
+        background-size: 20px 20px;
+    }
+    .event .announce .notice .list ul li a,
+    .event .announce .news .list ul li a {
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+    .event .announce .notice .list ul li a:hover,
+    .event .announce .news .list ul li a:hover {
+        border-bottom: 1px solid #1d1d1d;
+    }
+    .event .announce .notice .list ul li a p,
+    .event .announce .news .list ul li a p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 445px;
+    }
+    .event .announce .notice .list ul li a span,
+    .event .announce .news .list ul li a span {
+        color: #751f20;
+    }
+}
+@media screen and (max-width:1200px) {
+    .event .culture {
+        padding-left: 9.5%;
+    }
+    .event .culture .tit {
+        margin: 70px 0 8px 0;
+        width: 300px;
+    }
+    .event .culture .tit h2 {
+        font-size: 25px;
+    }
+    .event .culture .tit .btn_wrap button {
+        width: 30px;
+        height: 30px;
+    }
+    .event .culture .tit .btn_wrap button::before {
+        background-size: 25px 25px;
+    }
+    .event .culture .swiper ul li .photo {
+        width: 300px;
+    }
+    .event .culture .swiper ul li h3 {
+        width: 300px;
+        font-size: 17px;
+        margin: 8px 0 3px 0;
+    }
+    .event .culture .swiper ul li p {
+        width: 300px;
+        font-size: 17px;
+    }
+    .event .announce .notice {
+        padding: 70px 0 20px 60px;
+    }
+    .event .announce .news {
+        padding: 70px 0 60px 60px;
+    }
+    .event .announce .notice .tit,
+    .event .announce .news .tit {
+        margin-bottom: 15px;
+    }
+    .event .announce .notice .tit h2,
+    .event .announce .news .tit h2 {
+        font-size: 25px;
+    }
+    .event .announce .notice .tit .more a,
+    .event .announce .news .tit .more a {
+        width: 20px;
+        height: 20px;
+    }
+    .event .announce .notice .tit .more a::before,
+    .event .announce .news .tit .more a::before {
+        background-size: 18px 18px;
+    }
+    .event .announce .notice .list ul li a,
+    .event .announce .news .list ul li a {
+        margin-bottom: 22px;
+        font-size: 17px;
+    }
+    .event .announce .notice .list ul li a:hover,
+    .event .announce .news .list ul li a:hover {
+        border-bottom: 1px solid #1d1d1d;
+    }
+    .event .announce .notice .list ul li a p,
+    .event .announce .news .list ul li a p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 445px;
+    }
+    .event .announce .notice .list ul li a span,
+    .event .announce .news .list ul li a span {
+        color: #751f20;
+    }
+}
+@media screen and (max-width:1000px) {
+    .event .culture {
+        padding-left: 7.22%;
+    }
+    .event .culture .tit {
+        width: 83.21%;
+    }
+    .event .culture .swiper ul li .photo {
+        width: 83.21%;
+    }
+    .event .culture .swiper ul li h3 {
+        width: 83.21%;
+    }
+    .event .culture .swiper ul li p {
+        width: 83.21%;
+    }
+}
+@media screen and (max-width:768px) {
+    .event .culture {
+        width: auto;
+        border-left: none;
+        border-right: none;
+        padding-left: 0; 
+        position: relative;
+        padding-bottom: 60px;
+    }
+    .event .culture::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 1px;
+        left: -20px;
+        bottom: 0;
+        background-color: #1d1d1d;
+    }
+    .event .wrapper {
+        display: block;
+        position: relative;
+    }
+    .event .culture .tit {
+        margin-top: 60px;
+        display: block;
+        margin-bottom: 19px;
+    }
+    .event .culture .tit h2 {
+        font-size: 22px;
+    }
+    .event .culture .tit .btn_wrap {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .event .culture .swiper ul li a .photo {
+        width: 170px;
+        margin: 0 auto;
+    }
+    .event .culture .swiper ul li a h3,
+    .event .culture .swiper ul li a p {
+        font-size: 17px;
+        width: auto;
+        text-align: center;
+    }
+    .event .announce {
+        width: auto
+    }
+    .event .announce .notice {
+        padding: 55px 0 35px 0;
+    }
+    .event .announce .news {
+        padding: 50px 0 45px 0;
+    }
+    .event .announce .notice::before {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .event .announce .notice .tit,
+    .event .announce .news .tit {
+        margin-bottom: 17px;
+    }
+    .event .announce .notice .tit h2,
+    .event .announce .news .tit h2 {
+        font-size: 22px;
+    }
+    .event .announce .notice .tit .more a,
+    .event .announce .news .tit .more a {
+        width: 20px;
+        height: 20px;
+    }
+    .event .announce .notice .tit .more a::before,
+    .event .announce .news .tit .more a::before {
+        background-size: 15px 15px;
+    }
+    .event .announce .notice .list ul li:nth-child(3),
+    .event .announce .notice .list ul li:nth-child(4),
+    .event .announce .news .list ul li:nth-child(3),
+    .event .announce .news .list ul li:nth-child(4) {
+        display: none;
+    }
+    .event .announce .notice .list ul li a,
+    .event .announce .news .list ul li a {
+        margin-bottom: 17px;
+        font-size: 14px;
+    }
+    .event .announce .notice .list ul li a:hover,
+    .event .announce .news .list ul li a:hover {
+        border-bottom: none;
+    }
+    .event .announce .notice .list ul li a p,
+    .event .announce .news .list ul li a p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 65.94%;
+    }
 }
 
 
 
+/* 아이콘 깨짐, 아이콘 a 중앙에 배치 안됨, 상단 선 끊김*/
 
 
 body {

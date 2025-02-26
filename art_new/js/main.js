@@ -62,7 +62,7 @@ $(document).ready(function(){
 
     //effect: "fade", /* fade 효과 */
 
-        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
         
         navigation: {  /* 이전, 다음 버튼 */
         nextEl: '.event .culture .tit .btn_wrap .next',  /* 다음 버튼의 클래스명 */
@@ -93,15 +93,4 @@ $(document).ready(function(){
     $('.exhibition .list .swiper ul li').on('mouseleave', function(){
         $(this).removeClass('hover')
     })
-
-
-
-    $('.event .culture').on('mouseenter focusin', function(){
-        $(this).addClass('hover')
-    })
-    $('.event .culture').on('mouseleave', function(){
-        $(this).removeClass('hover')
-    })
-
-
 })
