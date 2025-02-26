@@ -110,8 +110,6 @@ header .logo a {
     }
     header .tnb {
         margin-right: 68px;
-        font-size: 0;
-        line-height: 0;
     }
 }
 @media screen and (max-width:768px) {
