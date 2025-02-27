@@ -469,7 +469,7 @@
 }
 .exhibition .list .swiper ul li.hover a .photo {
     opacity: 0.5;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 .exhibition .list .swiper ul li a h3 {
     margin: 24px 0 8px 0;
@@ -1075,6 +1075,276 @@
         overflow: hidden;
         width: 65.94%;
     }
+}
+.collection {
+    background-color: #eae1d0;
+    padding-bottom: 250px;
+}
+.collection h2 {
+    text-align: center;
+    font-size: 45px;
+    padding-top: 187px;
+}
+.collection .more {
+    text-align: end;
+    font-size: 25px;
+}
+.collection .more a::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -5px;
+    top: -10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.875 19.125H8.25V16.875H16.875V8.25H19.125V16.875H27.75V19.125H19.125V27.75H16.875V19.125Z' fill='%231F1F1F'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 36px 36px;
+}
+.collection .more a {
+    padding-right: 35px;
+    position: relative;
+}
+.collection .photo {
+    margin-top: 21px;
+}
+.collection .photo ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.collection .photo ul li {
+    display: inline-block;
+    width: 297px;
+    height: 265px;
+    position: relative;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.25);
+}
+.collection .photo ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+}
+.collection .photo ul li.hover::before {
+    opacity: 1;
+    transition: 0.4s;
+}
+.collection .photo ul li.bg1 {
+    background: url(../images/main/collection_01.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg2 {
+    background: url(../images/main/collection_02.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg3 {
+    background: url(../images/main/collection_03.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg4 {
+    background: url(../images/main/collection_04.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg5 {
+    background: url(../images/main/collection_05.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg6 {
+    background: url(../images/main/collection_06.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg7 {
+    background: url(../images/main/collection_07.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li.bg8 {
+    background: url(../images/main/collection_08.jpg) no-repeat center center / cover;
+}
+.collection .photo ul li a {
+    display: block;
+    padding: 150px 25px 0 0;
+    text-align: end;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.collection .photo ul li a p {
+    font-size: 35px;
+    margin-bottom: 5px;
+    opacity: 0;
+}
+.collection .photo ul li a span {
+    font-size: 25px;
+    opacity: 0;
+}
+.collection .photo ul li.hover a p,
+.collection .photo ul li.hover a span {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+@media screen and (max-width:1400px) {
+    .collection {
+        padding-bottom: 220px;
+    }
+    .collection h2 {
+        font-size: 35px;
+        padding-top: 150px;
+    }
+    .collection .more {
+        font-size: 20px;
+    }
+    .collection .more a {
+        padding-right: 18px;
+    }
+    .collection .more a::before {
+        width: 35px;
+        height: 35px;
+        right: -15px;
+        top: -9px;
+        background-size: 28px 28px;
+    }
+    .collection .photo {
+        margin-top: 15px;
+    }
+    .collection .photo ul {
+        gap: 18px;
+    }
+    .collection .photo ul li {
+        width: 260px;
+        height: 240px;
+    }
+    .collection .photo ul li a {
+        padding: 142px 20px 0 0;
+    }
+    .collection .photo ul li a p {
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+    .collection .photo ul li a span {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .collection {
+        padding-bottom: 180px;
+    }
+    .collection h2 {
+        font-size: 25px;
+        padding-top: 100px;
+    }
+    .collection .more {
+        font-size: 17px;
+    }
+    .collection .more a {
+        padding-right: 18px;
+    }
+    .collection .more a::before {
+        width: 30px;
+        height: 30px;
+        right: -15px;
+        top: -9px;
+        background-size: 25px 25px;
+    }
+    .collection .photo {
+        margin-top: 12px;
+    }
+    .collection .photo ul {
+        gap: 15px;
+    }
+    .collection .photo ul li {
+        width: 200px;
+        height: 180px;
+    }
+    .collection .photo ul li a {
+        padding: 108px 18px 0 0;
+    }
+    .collection .photo ul li a p {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .collection .photo ul li a span {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:768px) {
+    .collection h2 {
+        text-align: center;
+        font-size: 45px;
+        padding-top: 187px;
+    }
+    .collection .more {
+        text-align: end;
+        font-size: 25px;
+    }
+    .collection .more a::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: -5px;
+        top: -10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.875 19.125H8.25V16.875H16.875V8.25H19.125V16.875H27.75V19.125H19.125V27.75H16.875V19.125Z' fill='%231F1F1F'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 36px 36px;
+    }
+    .collection .more a {
+        padding-right: 35px;
+        position: relative;
+    }
+    .collection .photo {
+        margin-top: 21px;
+    }
+    .collection .photo ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .collection .photo ul li {
+        display: inline-block;
+        width: 297px;
+        height: 265px;
+        position: relative;
+        box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.25);
+    }
+    .collection .photo ul li::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0;
+    }
+    .collection .photo ul li.hover::before {
+        opacity: 1;
+        transition: 0.4s;
+    }
+    .collection .photo ul li a {
+        display: block;
+        padding: 150px 25px 0 0;
+        text-align: end;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    .collection .photo ul li a p {
+        font-size: 35px;
+        margin-bottom: 5px;
+        opacity: 0;
+    }
+    .collection .photo ul li a span {
+        font-size: 25px;
+        opacity: 0;
+    }
+    .collection .photo ul li.hover a p,
+    .collection .photo ul li.hover a span {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
 }
 
 

@@ -93,5 +93,21 @@ $(document).ready(function(){
     $('.exhibition .list .swiper ul li').on('mouseleave', function(){
         $(this).removeClass('hover')
     })
+
+
+    $('header .tnb .lang button').on('click', function(){
+        if($('header .tnb .lang .list').hasClass('open')){
+            $('header .tnb .lang .list').removeClass('open')
+        }else{
+            $('header .tnb .lang .list').addClass('open')
+        }
+    })
+
+
+    $('.collection .photo ul li').on('mouseenter focusin', function(){
+        $(this).addClass('hover')
+    })
+    $('.collection .photo ul li').on('mouseleave', function(){
+        $(this).removeClass('hover')
+    })
 })
-r라맹재ㅓ앰저ㅐ
