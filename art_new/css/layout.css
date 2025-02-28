@@ -166,3 +166,120 @@ header .logo a {
         height: auto;
     }
 }
+
+footer {
+    background-color: #272727;
+    color: #fff;
+    display: flex;
+    padding: 20px 0 80px 0;
+}
+footer .f_info {
+    width: 690px;
+}
+footer .f_info .logo {
+    text-indent: -9999px;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+    width: 391px;
+    height: 67px;
+    margin: 77px 0 0 65px;
+}
+footer .f_info .info {
+    padding: 169px 0 0 40px;
+}
+footer .f_guide {
+    display: flex;
+    gap: 104px;
+}
+footer .f_guide .community,
+footer .f_guide .use {
+    padding-top: 87px;
+}
+footer .f_guide .community .donation h2,
+footer .f_guide .use h2 {
+    margin-bottom: 17px;
+    font-weight: 700;
+}
+footer .f_guide .community .donation .details .item,
+footer .f_guide .use .help ul li {
+    line-height: 1.6;
+}
+footer .f_guide .community .trademark .icon {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 110px;
+}
+footer .f_guide .community .trademark .copyright {
+    opacity: 0.5;
+}
+footer .f_guide .use .design {
+    margin-top: 120px;
+    opacity: 0.5;
+}
+
+@media screen and (max-width:1200px) {
+    footer .f_info .logo {
+        width: 256px;
+        height: 44px;
+    }
+}
+@media screen and (max-width:768px) {
+    footer {
+        padding: 40px 20px 40px 20px ;
+        display: block;
+    }
+    footer .f_info {
+        width: auto;
+    }
+    footer .f_info .logo {
+        width: 195px;
+        height: 34px;
+        margin: 0;
+    }
+    footer .f_info .info {
+        margin: 0;
+        padding: 50px 0 0 0;
+    }
+    footer .f_guide {
+        display: block;
+    }
+    footer .f_guide .community,
+    footer .f_guide .use {
+        padding-top: 35px;
+    }
+    footer .f_guide .community .donation h2,
+    footer .f_guide .use h2 {
+        margin-bottom: 8px;
+    }
+    footer .f_guide .community .donation .details .item,
+    footer .f_guide .use .help ul li {
+        line-height: 1.6;
+    }
+    footer .community .trademark .icon {
+        margin-top: 35px;
+    }
+    footer .f_guide .use .help ul {
+        display: flex;
+        gap: 29px;
+    }
+    footer .f_guide .use .help ul li {
+        position: relative;
+    }
+    footer .f_guide .use .help ul li::before {
+        content: "";
+        position: absolute;
+        right: -16px;
+        top: 4px;
+        width: 1px;
+        height: 12px;
+        background-color: #fff;
+        opacity: 0.3;
+    }
+    footer .f_guide .use .help ul li:last-child::before {
+        display: none;
+    }
+    footer .f_guide .use .design {
+        margin-top: 35px;
+    }
+}
+
