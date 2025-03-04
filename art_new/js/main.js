@@ -110,4 +110,18 @@ $(document).ready(function(){
     $('.collection .photo ul li').on('mouseleave', function(){
         $(this).removeClass('hover')
     })
+
+
+    $('header .gnb .gnb_wrap ul.depth1 > li').on ('mouseenter focusin', function(){
+        $(this).addClass('over')
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li').on ('mouseleave', function(){
+        $(this).removeClass('over')
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').on('mouseenter focusin', function(){
+        $(this).addClass('over')
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').on('mouseleave', function(){
+        $(this).removeClass('over')
+    })
 })

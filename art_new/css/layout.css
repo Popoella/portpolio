@@ -42,15 +42,15 @@ header .logo a {
     header .gnb .gnb_wrap ul.depth1 > li {
         position: relative;
     }
+    header .gnb .gnb_wrap ul.depth1 > li.over > a {
+        color: #751f20;
+        font-weight: 700;
+    }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
         font-size: 22px;
         line-height: 100px;
         padding: 0 30px;
-    }
-    header .gnb .gnb_wrap ul.depth1 > li > a:hover {
-        font-weight: 700;
-        color: #751f20;
     }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: none;
@@ -64,9 +64,12 @@ header .logo a {
     header.menu_pc .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
         display: block;
     }
-    header.menu_pc .gnb .gnb_wrap ul.depth1 > li > ul.depth2
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li {
         margin-top: 24px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li.over {
+        color: #751f20;
+        font-weight: 700;
     }
     header .tnb {
         display: flex;
