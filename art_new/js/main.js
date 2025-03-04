@@ -95,14 +95,6 @@ $(document).ready(function(){
     })
 
 
-    $('header .tnb .lang button').on('click', function(){
-        if($('header .tnb .lang .list').hasClass('open')){
-            $('header .tnb .lang .list').removeClass('open')
-        }else{
-            $('header .tnb .lang .list').addClass('open')
-        }
-    })
-
 
     $('.collection .photo ul li').on('mouseenter focusin', function(){
         $(this).addClass('hover')
@@ -112,16 +104,14 @@ $(document).ready(function(){
     })
 
 
-    $('header .gnb .gnb_wrap ul.depth1 > li').on ('mouseenter focusin', function(){
-        $(this).addClass('over')
+    $('.exhibition').css('transition', '1s');
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop()
+        if( scrollTop > 1055 ) {
+            $('.exhibition').css('background-color', '#ffffff')
+        } else {
+            $('.exhibition').css('background-color', '#eae1d0')
+        }
     })
-    $('header .gnb .gnb_wrap ul.depth1 > li').on ('mouseleave', function(){
-        $(this).removeClass('over')
-    })
-    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').on('mouseenter focusin', function(){
-        $(this).addClass('over')
-    })
-    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li').on('mouseleave', function(){
-        $(this).removeClass('over')
-    })
+
 })

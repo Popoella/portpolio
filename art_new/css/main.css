@@ -116,15 +116,32 @@
     bottom: 0;
     width: 31%;
     height: 100%;
-    border-left: 1px solid #fff;
     z-index: 1;
+}
+.visual .link::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+    animation-name: line_01_ani;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes line_01_ani {
+    0% {height: 0;}
+    100% { height: 100%;}
 }
 
 .visual .link ul {
     width: 100%;
 }
 .visual .link ul li {
-    border-top: 1px solid #fff;
     position: relative;
 }
 .visual .link ul li::before {
@@ -139,6 +156,30 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
+}
+.visual .link ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+    animation-name: line_02_ani;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+@keyframes line_02_ani {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+.visual .link ul li:hover::before {
+    right: 15px;
+    transition: 0.4s;
 }
 .visual .link ul li a {
     font-size: 45px;
@@ -1322,6 +1363,6 @@
 
 
 
-/* 아이콘 깨짐, 아이콘 a 중앙에 배치 안됨, 상단 선 끊김*/
+/* 아이콘 깨짐, 모바일 검색 버튼 위로 올라감, 언어버튼 위치, 모바일 메뉴, identity 글씨 하나씩 나오게*/
 
 
