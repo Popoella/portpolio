@@ -118,7 +118,10 @@ header .logo a {
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         font-size: 20px;
-        padding: 0 15px;
+        padding: 20px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+        font-size: 14px;
     }
 }
 @media screen and (max-width:1200px) {
@@ -170,20 +173,38 @@ header .logo a {
         height: 55px;
         padding: 0 0 0 20px;
     }
-    header .gnb .gnb_open {
+    header .gnb .gnb_open,
+    header .gnb .gnb_close {
         width: 55px;
         height: 55px;
+    }
+    header .gnb .gnb_close {
+        display: none;
+    }
+    header.menu_mo .gnb .gnb_close {
+        display: block;
+    }
+    header.menu_mo .gnb .gnb_wrap {
+        display: block;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        padding-top: 57.84px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        font-size: 17px;
     }
     header .logo a img{
         width: 80%;
         height: auto;
     }
     header .gnb .gnb_open::before,
-    header .gnb .gnb_close::before {
+    ::before {
         background-size: 30px 30px;
     }
     header .tnb {
         margin-right: 55px;
+        font-size: 0;
+        line-height: 0;
     }
     header .tnb .search button img {
         width: 80%;

@@ -1,7 +1,7 @@
-@import url(default.css); /* 태그의 기본 스타일 빼기 */
-@import url(font.css); /* 웹폰트 선언 */
-@import url(common.css); /* wrapper, 기본 글자 스타일 */
-@import url(layout.css); /* header/footer  */
+@import url(default.css);
+@import url(font.css); 
+@import url(common.css);
+@import url(layout.css); 
 
 
 .visual {
@@ -79,7 +79,7 @@
     line-height: 0;
     width: 30px;
     height: 30px;
-    position: relative; /* before가 정렬의 기준 */
+    position: relative; 
 }
 .visual .btn_wrap button::before {
     content: "";
@@ -275,6 +275,8 @@
         top: 50%;
         transform: translateY(-50%);
         background-color: #1d1d1d;
+
+        animation: none;
     }
     .visual .link ul li:nth-child(1)::after {
         display: none;
@@ -366,11 +368,60 @@
 .identity .iden_txt h2 {
     font-size: 80px;
 }
+.identity .iden_txt h2 span {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.identity .iden_txt h2 span:nth-child(1){
+    animation-delay: 0.1s;
+}
+.identity .iden_txt h2 span:nth-child(2){
+    animation-delay: 0.15s;
+}
+.identity .iden_txt h2 span:nth-child(3){
+    animation-delay: 0.2s;
+}
+.identity .iden_txt h2 span:nth-child(4){
+    animation-delay: 0.25s;
+}
+.identity .iden_txt h2 span:nth-child(5){
+    animation-delay: 0.3s;
+}
+.identity .iden_txt h2 span:nth-child(6){
+    animation-delay: 0.35s;
+}
+.identity .iden_txt h2 strong span:nth-child(1){
+    animation-delay: 0.4s;
+}
+.identity .iden_txt h2 strong span:nth-child(2){
+    animation-delay: 0.45s;
+}
+.identity .iden_txt h2 strong span:nth-child(3){
+    animation-delay: 0.5s;
+}
+.identity .iden_txt h2 strong span:nth-child(4){
+    animation-delay: 0.55s;
+}
+.identity .iden_txt h2 strong span:nth-child(5){
+    animation-delay: 0.6s;
+}
+.identity .iden_txt h2 strong span:nth-child(6){
+    animation-delay: 0.65s;
+}
+.identity .iden_txt h2 strong span:nth-child(7){
+    animation-delay: 0.7s;
+}
+.identity .iden_txt h2 strong span:nth-child(8){
+    animation-delay: 0.75s;
+}
 .identity .iden_txt h2 strong {
     color: #751f20;
 }
 .identity .iden_txt p {
     font-size: 35px;
+}
+@keyframes fadeIn {
+    to {opacity: 1;}
 }
 
 @media screen and (max-width:1400px) {
@@ -836,6 +887,7 @@
 .event .announce .notice .list ul li a:hover,
 .event .announce .news .list ul li a:hover {
     border-bottom: 1px solid #1d1d1d;
+    font-weight: 700;
 }
 .event .announce .notice .list ul li a p,
 .event .announce .news .list ul li a p {
@@ -1101,10 +1153,6 @@
         margin-bottom: 17px;
         font-size: 14px;
     }
-    .event .announce .notice .list ul li a:hover,
-    .event .announce .news .list ul li a:hover {
-        border-bottom: none;
-    }
     .event .announce .notice .list ul li a p,
     .event .announce .news .list ul li a p {
         text-overflow: ellipsis;
@@ -1360,9 +1408,5 @@
     }
 }
 
-
-
-
-/* 아이콘 깨짐, 모바일 검색 버튼 위로 올라감, 언어버튼 위치, 모바일 메뉴, identity 글씨 하나씩 나오게*/
 
 

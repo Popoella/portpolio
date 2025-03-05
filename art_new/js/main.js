@@ -1,45 +1,44 @@
 $(document).ready(function(){
 
 
-    /************* start :: visual의 popup swiper 연결***********/
-    const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    
+    const visual_swiper = new Swiper('.visual .swiper', { 
 
-        //autoplay: {  /* 팝업 자동 실행 */
-            //delay: 5000,
-            //disableOnInteraction: true,
-        //},
+        autoplay: {  
+            delay: 5000,
+            disableOnInteraction: true,
+        },
 
-        //effect: "fade", /* fade 효과 */
+        //effect: "fade", 
 
-        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        loop: true,  
 
-        navigation: {  /* 이전, 다음 버튼 */
-            nextEl: '.visual  .btn_wrap .next',  /* 다음 버튼의 클래스명 */
+        navigation: {  
+            nextEl: '.visual  .btn_wrap .next',  
             prevEl: '.visual  .btn_wrap .prev',  
         },
 
     });
-    /************* end :: visual의 popup swiper 연결***********/
 
 
 
-    const exhibition_swiper = new Swiper('.exhibition .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const exhibition_swiper = new Swiper('.exhibition .swiper', { 
 
-        // autoplay: {  /* 팝업 자동 실행 */
+        // autoplay: {  
         //     delay: 5000,
         //     disableOnInteraction: true,
         // },
 
-        //effect: "fade", /* fade 효과 */
+        //effect: "fade", 
 
-        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        loop: false,  
 
-        slidesPerView: 'auto',  // 예시로 한 번에 3개의 이미지 보여주기
+        slidesPerView: 'auto',  
 
-        spaceBetween: 40,  // 슬라이드 간의 간격 (10px)
+        spaceBetween: 40,  
 
-        navigation: {  /* 이전, 다음 버튼 */
-            nextEl: '.visual  .btn_wrap .next',  /* 다음 버튼의 클래스명 */
+        navigation: {  
+            nextEl: '.visual  .btn_wrap .next',  
             prevEl: '.visual  .btn_wrap .prev',  
         },
         breakpoints: {
@@ -53,19 +52,19 @@ $(document).ready(function(){
 
     });
 
-    const event_swiper = new Swiper('.event .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const event_swiper = new Swiper('.event .swiper', {
 
-    // autoplay: {  /* 팝업 자동 실행 */
-    //     delay: 5000,
-    //     disableOnInteraction: true,
-    // },
+    autoplay: { 
+        delay: 3000,
+        disableOnInteraction: true,
+    },
 
-    //effect: "fade", /* fade 효과 */
+   
 
-        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        loop: true, 
         
-        navigation: {  /* 이전, 다음 버튼 */
-        nextEl: '.event .culture .tit .btn_wrap .next',  /* 다음 버튼의 클래스명 */
+        navigation: { 
+        nextEl: '.event .culture .tit .btn_wrap .next', 
         prevEl: '.event .culture .tit .btn_wrap .prev',  
         },
 
@@ -75,12 +74,12 @@ $(document).ready(function(){
 
 
     $('.visual .btn_wrap button.stop').on('click', function(){
-        visual_swiper.autoplay.stop();  /* 일시정지 기능 */
+        visual_swiper.autoplay.stop();  
         $(this).hide();
         $('.visual .btn_wrap button.play').show();
 	});
     $('.visual .btn_wrap button.play').on('click', function(){
-        visual_swiper.autoplay.start();  /* 재생 기능 */
+        visual_swiper.autoplay.start(); 
         $(this).hide();
         $('.visual .btn_wrap button.stop').show();
 	});
@@ -103,15 +102,5 @@ $(document).ready(function(){
         $(this).removeClass('hover')
     })
 
-
-    $('.exhibition').css('transition', '1s');
-    $(window).scroll(function(){
-        var scrollTop = $(window).scrollTop()
-        if( scrollTop > 1055 ) {
-            $('.exhibition').css('background-color', '#ffffff')
-        } else {
-            $('.exhibition').css('background-color', '#eae1d0')
-        }
-    })
 
 })
